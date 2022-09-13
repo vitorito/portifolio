@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="João Victor Oliveira Batista">
+
+    <title>João Victor - Portifólio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body class="t">
+
+    <header class="header">
+        <nav class="menu">
+            <button class="menu__btn"></button>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about-me">Sobre Mim</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section-container" id="home">
+        <h1>
+            Olá! Eu sou
+            <span class="my-name">João Victor</span>
+            <span class="my-description">Desenvolvedor web full-stack.</span>
+        </h1>
+
+        <div class="contact-icons">
+            <a href="#" title="Linkedin" class="btn">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+            </a>
+            <a href="#" title="GitHub" class="btn">
+                <i class="fa-brands fa-github"></i>
+                GitHub
+            </a>
+        </div>
+    </section>
+
+    <section class="section-container" id="about-me">
+        <h2>Sobre Mim</h2>
+        <p>Eu sou o <span>João Victor</span>, também conhecido como <span class="underline">Marcus</span>. Tenho 21 anos
+            e estou cursando Ciência da Computação na Universidade Federal de Campina Grande (<abbr>UFCG</abbr>). Gosto
+            de tecnologia, design minimalista e um <span class="wavy">café quentinho</span>. Sempre buscando aprender
+            algo novo, atualmente
+            estou à procura da minha <span class="underline">primeira experiência profissional</span>.
+    </section>
+
+    <section class="section-container" id="projects">
+        <h2>Projetos</h2>
+        <div class="projects__grid">
+            <article class="projects__grid__card">
+                <h3 class="project-tittle">Nome do Projeto</h3>
+                <p class="project-description sr-only">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, odio. Ipsa quasi molestiae voluptatem
+                    atque aspernatur impedit, temporibus perspiciatis aperiam officia ratione laborum. Quo voluptatem
+                    iste exercitationem, dolore odit et?
+                </p>
+                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+                <img class="project-thumb" src="./assets/img/print-site1.jpeg" alt="">
+            </article>
+            <article class="projects__grid__card no-project">
+                <h3 class="project-tittle">Nome do Projeto</h3>
+                <p class="project-description sr-only">Uma descrição Legal</p>
+                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+                <img class="project-thumb" src="./assets/img/print-site2.jpeg" alt="">
+            </article>
+            <article class="projects__grid__card">
+                <h3 class="project-tittle">Nome do Projeto</h3>
+                <p class="project-description sr-only">Uma descrição Legal</p>
+                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+                <img class="project-thumb" src="./assets/img/print-site3.jpeg" alt="">
+            </article>
+            <article class="projects__grid__card last-3-cards">
+                <h3 class="project-tittle">Nome do Projeto</h3>
+                <p class="project-description sr-only">Uma descrição Legal</p>
+                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+
+                <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
+            </article>
+            <article class="projects__grid__card last-3-cards">
+                <h3 class="project-tittle">Nome do Projeto</h3>
+                <p class="project-description sr-only">Uma descrição Legal</p>
+                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+                <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
+            </article>
+            <article class="projects__grid__card last-3-cards">
+                <h3 class="project-tittle">Nome do Projeto</h3>
+                <p class="project-description sr-only">Uma descrição Legal</p>
+                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+                <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
+            </article>
+        </div>
+        <button class="btn show-more-btn">Ver Mais</button>
+        <div class="flex-center projects-modal-container">
+            <div class="projects-modal" id="projects-modal">
+                <div class="projects-modal__thumb__container">
+                    <img class="projects-modal__thumb" src="" alt="">
+                    <a class="projects-modal__thumb__link flex-center" href="#" target="_blank">
+                        Visitar Site
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-solid fa-link"></i>
+                    </a>
+                </div>
+                <div class="projects-modal__content">
+                    <h3 class="projects-modal__title"></h3>
+                    <p class="projects-modal__description"></p>
+                    <p class="projects-modal__tags"></p>
+                </div>
+                <i class="projects-modal__close-btn fa-solid fa-rectangle-xmark"></i>
+                <a class="btn projects-modal__link" href="#" target="_blank" title="Visitar site">
+                    Visitar Site
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+
+    </section>
+
+    <script src="https://kit.fontawesome.com/137996cfb0.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>

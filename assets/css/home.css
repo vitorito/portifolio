@@ -1,0 +1,56 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20vh 0;
+}
+
+#home h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.my-name {
+    display: block;
+    width: 95%;
+    margin-top: 3vh;
+    text-align: center;
+    font-size: 3rem;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.my-description {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--grey);
+}
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 5vh 0;
+}
+
+.contact-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 10rem;
+    gap: 5px;
+    font-size: 1.4rem;
+    padding: 5px;
+}
+
+.contact-icons a:hover {
+    background-color: var(--dark-grey);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact-icons i {
+    font-size: 3rem;
+}

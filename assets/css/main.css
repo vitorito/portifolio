@@ -1,0 +1,92 @@
+@import url('./header.css');
+@import url('./home.css');
+@import url('./aboutMe.css');
+@import url('./projects.css');
+@import url('./projectModal.css');
+
+:root {
+    --white: #ededed;
+    --grey: #6d6d6d;
+    --dark-grey: #1d1d1d;
+    --black: #0d1012;
+    --shadow: 0 0 10px black;
+
+    font-size: 62.5%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+button {
+    cursor: pointer;
+}
+
+.section-container {
+    width: 80vw;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 8vh 0;
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.section-container h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline white;
+}
+
+.underline {
+    text-decoration: underline white;
+}
+
+.wavy {
+    text-decoration: underline wavy white;
+}
+
+.btn {
+    color: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 1.4rem;
+}
+
+.btn:hover {
+    background-color: var(--dark-grey);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
