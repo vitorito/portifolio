@@ -1,0 +1,51 @@
+#skills {
+    font-size: 1.7rem;
+}
+
+#skills .skills-container {
+    padding: 30px 0;
+    justify-content: space-around;
+}
+
+.skill-icons {
+    width: 100%;
+    padding: 20px 0;
+    justify-content: space-evenly;
+}
+
+.skill-icon {
+    flex-direction: column;
+    width: 25vw;
+    font-size: 3rem;
+    gap: 8px;
+    color: var(--grey);
+    cursor: pointer;
+}
+
+.skill-title {
+    font-size: 1.2rem;
+}
+
+.skill.active-skill .skill-icon {
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+.active-skill-description {
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.text-change {
+    animation: text-change 1s;
+}
+
+@keyframes text-change {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

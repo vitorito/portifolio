@@ -1,4 +1,5 @@
 import openProjectModal from './projectModal.js';
+import './skills.js';
 
 const menu = document.querySelector('.menu');
 const projectsGrid = document.querySelector('.projects__grid');

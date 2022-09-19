@@ -47,7 +47,7 @@
 
 .projects__grid__card:hover {
     scale: 1.05;
-} 
+}
 
 .projects__grid__card::before {
     position: absolute;
@@ -81,7 +81,7 @@
 }
 
 .projects__grid__card:hover::after {
-    z-index: 2; 
+    z-index: 2;
     transform: skewX(45deg) translateX(-300%);
 }
 
@@ -93,21 +93,22 @@
     object-position: center;
 }
 
-.project-tittle {
+.project-title {
     font-weight: 400;
 }
+
 .project-tags {
     font-weight: 300;
+    color: var(--grey);
 }
 
-.project-tittle,
+.project-title,
 .project-tags {
-    padding: 15px;
-    color: white;
+    padding: 10px;
     z-index: 1;
 }
 
-.projects__grid__card:hover .project-tittle,
+.projects__grid__card:hover .project-title,
 .projects__grid__card:hover .project-tags {
     visibility: hidden;
 }
@@ -118,7 +119,17 @@
     height: 3rem;
 }
 
-@media only screen  and (max-width: 1274px) {
+.no-project {
+    background-image: url('../img/forest.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* .no-project * {
+    display: none;
+} */
+
+@media only screen and (max-width: 1274px) {
     .projects__grid:not(.show-more) .projects__grid__card:nth-last-child(-n + 4) {
         height: 0;
         width: 0;

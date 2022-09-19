@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
-<body class="t">
+<body>
 
     <header class="header">
         <nav class="menu">
@@ -26,7 +26,7 @@
                 <li><a href="#home">Início</a></li>
                 <li><a href="#about-me">Sobre Mim</a></li>
                 <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#skills">Habilidades</a></li>
             </ul>
         </nav>
     </header>
@@ -52,55 +52,57 @@
 
     <section class="section-container" id="about-me">
         <h2>Sobre Mim</h2>
-        <p>Eu sou o <span>João Victor</span>, também conhecido como <span class="underline">Marcus</span>. Tenho 21 anos
-            e estou cursando Ciência da Computação na Universidade Federal de Campina Grande (<abbr>UFCG</abbr>). Gosto
-            de tecnologia, design minimalista e um <span class="wavy">café quentinho</span>. Sempre buscando aprender
-            algo novo, atualmente
-            estou à procura da minha <span class="underline">primeira experiência profissional</span>.
+        <p>
+            Eu sou o <span>João Victor</span>, também conhecido como <span class="underline">Marcus</span>. Tenho 21
+            anos e estou cursando Ciência da Computação na Universidade Federal de Campina Grande (<abbr>UFCG</abbr>).
+            Gosto de tecnologia, design minimalista e um <span class="wavy">café quentinho</span>. Sempre buscando
+            aprender algo novo, atualmente estou à procura da minha
+            <span class="underline">primeira experiência profissional</span>.
+        </p>
     </section>
 
     <section class="section-container" id="projects">
         <h2>Projetos</h2>
         <div class="projects__grid">
-            <article class="projects__grid__card">
-                <h3 class="project-tittle">Nome do Projeto</h3>
+            <article class="projects__grid__card no-project">
+                <h3 class="project-title">Nome do Projeto</h3>
                 <p class="project-description sr-only">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, odio. Ipsa quasi molestiae voluptatem
                     atque aspernatur impedit, temporibus perspiciatis aperiam officia ratione laborum. Quo voluptatem
                     iste exercitationem, dolore odit et?
                 </p>
-                <p class="project-tags">Techs: HTML, CSS, javascript</p>
-                <img class="project-thumb" src="./assets/img/print-site1.jpeg" alt="">
+                <p class="project-tags">Techs: HTML, CSS, Javascript</p>
+                <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
             </article>
             <article class="projects__grid__card no-project">
-                <h3 class="project-tittle">Nome do Projeto</h3>
+                <h3 class="project-title">Nome do Projeto</h3>
                 <p class="project-description sr-only">Uma descrição Legal</p>
-                <p class="project-tags">Techs: HTML, CSS, javascript</p>
-                <img class="project-thumb" src="./assets/img/print-site2.jpeg" alt="">
+                <p class="project-tags">Techs: HTML, CSS, Javascript</p>
+                <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
             </article>
-            <article class="projects__grid__card">
-                <h3 class="project-tittle">Nome do Projeto</h3>
+            <article class="projects__grid__card no-project">
+                <h3 class="project-title">Nome do Projeto</h3>
                 <p class="project-description sr-only">Uma descrição Legal</p>
-                <p class="project-tags">Techs: HTML, CSS, javascript</p>
-                <img class="project-thumb" src="./assets/img/print-site3.jpeg" alt="">
+                <p class="project-tags">Techs: HTML, CSS, Javascript</p>
+                <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
             </article>
-            <article class="projects__grid__card last-3-cards">
-                <h3 class="project-tittle">Nome do Projeto</h3>
+            <article class="projects__grid__card last-3-cards no-project">
+                <h3 class="project-title">Nome do Projeto</h3>
                 <p class="project-description sr-only">Uma descrição Legal</p>
-                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+                <p class="project-tags">Techs: HTML, CSS, Javascript</p>
 
                 <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
             </article>
-            <article class="projects__grid__card last-3-cards">
-                <h3 class="project-tittle">Nome do Projeto</h3>
+            <article class="projects__grid__card last-3-cards no-project">
+                <h3 class="project-title">Nome do Projeto</h3>
                 <p class="project-description sr-only">Uma descrição Legal</p>
-                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+                <p class="project-tags">Techs: HTML, CSS, Javascript</p>
                 <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
             </article>
-            <article class="projects__grid__card last-3-cards">
-                <h3 class="project-tittle">Nome do Projeto</h3>
+            <article class="projects__grid__card last-3-cards no-project">
+                <h3 class="project-title">Nome do Projeto</h3>
                 <p class="project-description sr-only">Uma descrição Legal</p>
-                <p class="project-tags">Techs: HTML, CSS, javascript</p>
+                <p class="project-tags">Techs: HTML, CSS, Javascript</p>
                 <img class="project-thumb" src="./assets/img/forest.jpg" alt="">
             </article>
         </div>
@@ -129,8 +131,39 @@
         </div>
     </section>
 
-    <section class="section-container">
-
+    <section class="section-container" id="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-container flex-center">
+            <div class="skill flex-center active-skill">
+                <div class="skill-icon flex-center">
+                    <i class="fa-solid fa-code" title="Front-end"></i>
+                    <p class="skill-title">Front-end</p>
+                </div>
+                <p class="skill-description sr-only">
+                    Tenho conhecimentos em HTML, CSS, React, Styled Components.
+                </p>
+            </div>
+            <div class="skill flex-center">
+                <div class="skill-icon flex-center">
+                    <i class="back-end-icon fa-solid fa-server" title="Back-end"></i>
+                    <p class="skill-title">Back-end</p>
+                </div>
+                <p class="skill-description sr-only">
+                    Construí APIs REST com Node, Express, Sequelize e Springboot.
+                </p>
+            </div>
+            <div class="skill flex-center">
+                <div class="skill-icon flex-center">
+                    <i class="general-icon fa-solid fa-gear" title="Gerais"></i>
+                    <p class="skill-title">Geral</p>
+                </div>
+                <p class="skill-description sr-only">
+                    Programo em Java, Javascript e Python; tenho conhecimentos em versionamento de código com Git e
+                    GitHub;
+                </p>
+            </div>
+        </div>
+        <p class="active-skill-description"></p>
     </section>
 
     <script src="https://kit.fontawesome.com/137996cfb0.js" crossorigin="anonymous"></script>

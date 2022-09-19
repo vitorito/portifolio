@@ -1,13 +1,10 @@
-#about-me {
-    font-size: 1.7rem;
-    letter-spacing: 2px;
-}
-
 #about-me h2 {
     padding-bottom: 3vh;
 }
 
 #about-me p {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
     color: var(--grey);
 }
 
