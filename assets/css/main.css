@@ -92,3 +92,14 @@ button {
     overflow: hidden;
 }
 
+@media only screen and (min-width: 480px) {
+    :root {
+        font-size: 81.25%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        font-size: 87.5%;
+    }
+}
