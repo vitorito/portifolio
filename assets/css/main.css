@@ -47,7 +47,8 @@ button {
     max-width: 1200px;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 8vh 0;
+    padding-top: 100px;
+    padding-bottom: 8vh;
     border-bottom: 1px solid var(--dark-grey);
 }
 
@@ -102,4 +103,6 @@ button {
     :root {
         font-size: 87.5%;
     }
+
+
 }
