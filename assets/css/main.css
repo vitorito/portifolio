@@ -16,6 +16,8 @@
     height: 100%;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    scrollbar-width: 8px;
+    scrollbar-color: var(--grey) var(--black);
 }
 
 * {
@@ -93,6 +95,16 @@ button {
     overflow: hidden;
 }
 
+::-webkit-scrollbar {
+    background-color: var(--black);
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 8px;
+}
+
 @media only screen and (min-width: 480px) {
     :root {
         font-size: 81.25%;
@@ -103,6 +115,4 @@ button {
     :root {
         font-size: 87.5%;
     }
-
-
 }
