@@ -1,13 +1,76 @@
-#about-me h2 {
-    padding-bottom: 3vh;
+#about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-#about-me p {
-    font-size: 1.7rem;
-    letter-spacing: 2px;
+#about-me h2 {
+    align-self: flex-start;
+}
+
+#about-me .about-me__container {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: max(40px, 5vw);
+}
+
+.my-photo {
+    width: clamp(220px, 30vh, 80vw);
+    height: clamp(220px, 30vh, 80vw);
+    border-left: 4px solid var(--grey);
+    border-radius: 4px 0 0 4px;
+}
+
+.about-me__container__description {
+    width: 100%;
+}
+
+.about-me__container__description__icons {
+    width: 100%;
+    margin-top: 6vh;
+    gap: min(40px, 10vw);
+}
+
+.about-me__container__description__icons .btn {
+    width: 12rem;
+    height: 4.2rem;
+    justify-content: space-around;
+}
+
+.about-me__container__description__icons i {
+    font-size: 3rem;
+}
+
+.about-me__container p {
+    font-size: 1.55rem;
+    letter-spacing: 1.5px;
     color: var(--grey);
 }
 
-#about-me p span {
+.about-me__container p span {
     color: var(--white);
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 1024px) {
+    #about-me .about-me__container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .my-photo {
+        margin-bottom: 10vh;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #about-me .about-me__container {
+        padding-bottom: 10vh;
+    }
+
+    .my-photo {
+        margin-bottom: 0\;
+    }
 }
