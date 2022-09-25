@@ -84,6 +84,7 @@
 
     .header {
         position: absolute;
+        height: 60px;
     }
 
     .menu {

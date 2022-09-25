@@ -1,8 +1,13 @@
 const closeModal = () => {
   modalContainer.classList.remove(OPEN_MODAL_CLASS);
+  const body = document.body;
+  body.style.overflow = 'auto';
 };
+
 const openModal = () => {
   modalContainer.classList.add(OPEN_MODAL_CLASS);
+  const body = document.body;
+  body.style.overflow = 'hidden';
 };
 
 const showModal = ({ name, description, tags, src, alt }) => {
