@@ -36,10 +36,6 @@
     color: var(--grey);
 }
 
-.full-stack {
-    display: inline-block;
-}
-
 .contact-icons {
     width: 100%;
     gap: 5vw;

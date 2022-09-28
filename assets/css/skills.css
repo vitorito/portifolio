@@ -3,23 +3,26 @@
 }
 
 #skills .skills-container {
-    padding: 30px 0;
+    padding-top: 30px;
+    padding-bottom: clamp(30px, 4vh, 70px);
     justify-content: space-around;
-}
-
-.skill-icons {
-    width: 100%;
-    padding: 20px 0;
-    justify-content: space-evenly;
 }
 
 .skill-icon {
     flex-direction: column;
     width: 25vw;
+    max-width: 200px;
     font-size: 3rem;
     gap: 8px;
     color: var(--grey);
     cursor: pointer;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+}
+
+.skill:not(.active-skill) .skill-icon:hover {
+    color: var(--white);
+    opacity: 0.8;
 }
 
 .skill-title {
@@ -28,12 +31,60 @@
 
 .skill.active-skill .skill-icon {
     color: var(--white);
-    border-bottom: 1px solid var(--white);
+    border-bottom-color: var(--white);
 }
 
 .active-skill-description {
     letter-spacing: 1px;
     font-weight: 300;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.active-skill-description li {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    border-top: 1px solid var(--dark-grey);
+    border-radius: 20px;
+    box-shadow: 0 6px 4pX -4px rgba(0, 0, 0, 0.7);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.active-skill-description li:hover {
+    border: 1px solid var(--grey);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+}
+
+
+.active-skill-description li > div {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.active-skill-description svg {
+    width: clamp(60px, 10vw, 120px);
+    transition: fill 300ms;
+}
+
+.spring-boot-icon {
+    fill: #6db33f;
+}
+
+
+.active-skill-description span {
+    font-weight: 600;
+    text-decoration: var(--grey) underline wavy;
+}
+
+.active-skill-description .btn {
+    padding: 10px;
+    background-color: transparent;
 }
 
 .text-change {
@@ -48,4 +99,24 @@
     to {
         opacity: 1;
     }
+}
+
+@media only screen and (min-width: 1024px) {
+    .active-skill-description li {
+        padding: 40px;
+        padding-bottom: 30px;
+    }
+
+    .active-skill-description li:not(:hover) svg {
+        fill: var(--grey);
+    }
+
+    .active-skill-description li > div {
+        flex-direction: row;
+    }
+
+    .active-skill-description li > div p {
+        max-width: 80%;
+    }
+
 }
