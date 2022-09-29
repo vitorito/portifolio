@@ -39,7 +39,6 @@
     font-weight: 300;
     font-size: 1.4rem;
     margin: 0 auto;
-    max-width: 1000px;
 }
 
 .active-skill-description li {
@@ -65,10 +64,12 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 15px;
+    width: 100%;
 }
 
 .active-skill-description svg {
     width: clamp(60px, 10vw, 120px);
+    height: clamp(60px, 10vw, 120px);
     transition: fill 300ms;
 }
 
@@ -76,6 +77,13 @@
     fill: #6db33f;
 }
 
+.react-icon {
+    fill: #61DBFB;
+}
+
+.node-icon {
+    fill: #44883e;
+}
 
 .active-skill-description span {
     font-weight: 600;
@@ -113,10 +121,13 @@
 
     .active-skill-description li > div {
         flex-direction: row;
+        justify-content: center;
+        gap: 2vw;
     }
 
     .active-skill-description li > div p {
-        max-width: 80%;
+        width: 80%;
+        align-self: flex-start;
     }
 
 }
