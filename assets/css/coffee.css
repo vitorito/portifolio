@@ -1,0 +1,123 @@
+.coffee-container {
+  --primary-color: var(--grey);
+  --border-size: min(1.5vw, 6px);
+
+  position: relative;
+  background-color: var(--black);
+  min-width: min(35vw, 150px);
+  height: min(35vw, 150px);
+  max-height: 300%;
+  margin-top: 30px;
+}
+
+.cup {
+  width: 100%;
+  height: 100%;
+  border: var(--border-size) solid var(--black);
+  box-shadow: 0 0 0 var(--border-size) var(--primary-color);
+  border-radius: 5% 5% 30% 30%;
+  background-image: url('../img/coffee.png');
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: 0 20%;
+  animation: wave 15s infinite linear;
+  transition: background-position-y 500ms linear;
+  transform: translateX(-7px);
+}
+
+.handle {
+  position: absolute;
+  width: 30%;
+  height: 60%;
+  right: -37%;
+  top: 20%;
+  border: var(--border-size) solid var(--primary-color);
+  border-left-width: 5px;
+  border-radius: 0 20px 80% 0;
+}
+
+.plate {
+  content: '';
+  position: absolute;
+  bottom: -18%;
+  left: -8%;
+  width: 120%;
+  height: var(--border-size);
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0px 8px 8px -5px white;
+}
+
+.steam {
+  position: absolute;
+  top: max(-50%, -70px);
+  left: 50%;
+  width: 6%;
+  height: 20%;
+  background-color: #45454590;
+  border-radius: 10px 2px;
+  animation: steam 2s linear infinite;
+  animation-delay: 100ms;
+}
+
+.steam::before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  left: -20px ;
+  top: 15px;
+  background-color: #64646485;
+  border-radius: inherit;
+  animation: inherit;
+}
+
+.steam::after {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 20px ;
+  top: 10px;
+  background-color: #707070bc;
+  border-radius: inherit;
+  animation: inherit;
+  animation-delay: 400ms;
+}
+
+@keyframes wave {
+
+  0% {
+    background-position-x: 0px;
+  }
+
+  100% {
+    background-position-x: calc(min(35vw, 150px)*10.2);
+  }
+}
+
+@keyframes steam {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(1px);
+    transform: translateY(-10px);
+    scale: 110%;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .plate {
+    bottom: -16%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .coffee-container {
+    margin-top: 70px;
+    margin-right: 15vw;
+  }
+}

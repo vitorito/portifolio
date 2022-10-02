@@ -4,6 +4,7 @@
 @import './projects.css';
 @import './projectModal.css';
 @import './skills.css';
+@import './coffee.css';
 
 :root {
     --white: #ededed;
