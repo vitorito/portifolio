@@ -16,14 +16,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: clamp(300px, 60vw, 800px);
-    height: 60vh;
+    width: 100%;
+    max-width: 85vw;
+    height: 100%;
+    max-height: 60vh;
     border: 1px solid var(--grey);
     background-color: var(--black);
     box-shadow: var(--shadow);
     overflow-y: auto;
     animation: show-modal 600ms ease;
-    filter: none;
+    border-radius: 4px;
 }
 
 .projects-modal__content {
@@ -43,12 +45,12 @@
     font-size: 1.5rem;
     flex-grow: 2;
     color: var(--grey);
-    letter-spacing: 1px;
 }
 
 .projects-modal__tags {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
 .projects-modal__thumb {
@@ -58,8 +60,10 @@
 }
 
 .projects-modal__thumb__container {
+    align-self: center;
     width: 100%;
-    height: 40%;
+    aspect-ratio: 16 / 9;
+    max-height: 55%;
     position: relative;
 }
 
@@ -77,6 +81,7 @@
     color: var(--white);
     text-shadow: 0 0 3px black;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: color 200ms;
 }
 
 .projects-modal__thumb__link i.fa-arrow-up-right-from-square {
@@ -110,17 +115,17 @@
     opacity: 0.8;
 }
 
-.projects-modal__link {
+.projects-modal__visit-btn {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 12rem;
     height: 3.5rem;
     align-self: center;
-    margin-bottom: 20px;
+    margin: 2vh 0;
 }
 
-.projects-modal__link i {
+.projects-modal__visit-btn i {
     font-size: 2rem;
 }
 
@@ -133,5 +138,38 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .projects-modal {
+        max-width: 80vw;
+        max-height: 65vh;
+    }
+
+    .projects-modal__title {
+        font-size: 1.7rem;
+    }
+
+    .projects-modal__description {
+        font-size: 1.4rem;
+    }
+
+    .projects-modal__tags {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .projects-modal {
+        max-width: 75vw;
+        max-height: 75vh;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .projects-modal {
+        width: 800px;
     }
 }

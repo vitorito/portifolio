@@ -1,8 +1,13 @@
 const closeModal = () => {
   modalContainer.classList.remove(OPEN_MODAL_CLASS);
+  const body = document.body;
+  body.style.overflow = 'auto';
 };
+
 const openModal = () => {
   modalContainer.classList.add(OPEN_MODAL_CLASS);
+  const body = document.body;
+  body.style.overflow = 'hidden';
 };
 
 const showModal = ({ name, description, tags, src, alt }) => {
@@ -25,8 +30,23 @@ const openProjectModal = ({ currentTarget: projectCard }) => {
   showModal({ name, description, tags, src, alt });
 };
 
-const OPEN_MODAL_CLASS = 'open-modal';
+const showMoreProjects = () => {
+  const hasShowMoreClass = projectsGrid.classList.toggle('show-more');
+  showMoreBtn.textContent = hasShowMoreClass ? 'Ver Menos' : 'Ver Mais';
+};
 
+const projectsGrid = document.querySelector('.projects__grid');
+const projectsGridCards = projectsGrid.querySelectorAll(
+  '.projects__grid__card'
+);
+const showMoreBtn = document.querySelector('.show-more-btn');
+showMoreBtn.addEventListener('click', showMoreProjects);
+
+projectsGridCards.forEach((card) => {
+  card.addEventListener('click', openProjectModal);
+});
+
+const OPEN_MODAL_CLASS = 'open-modal';
 const modal = document.getElementById('projects-modal');
 const modalContainer = modal.parentNode;
 const modaltitle = modal.querySelector('.projects-modal__title');
@@ -40,5 +60,3 @@ modalContainer.addEventListener('click', ({ target }) => {
     closeModal();
   }
 });
-
-export default openProjectModal;

@@ -1,9 +1,10 @@
-@import url('./header.css');
-@import url('./home.css');
-@import url('./aboutMe.css');
-@import url('./projects.css');
-@import url('./projectModal.css');
-@import url('./skills.css');
+@import './header.css';
+@import './home.css';
+@import './aboutMe.css';
+@import './projects.css';
+@import './projectModal.css';
+@import './skills.css';
+@import './coffee.css';
 
 :root {
     --white: #ededed;
@@ -16,6 +17,8 @@
     height: 100%;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    scrollbar-width: 8px;
+    scrollbar-color: var(--grey) transparent;
 }
 
 * {
@@ -92,3 +95,28 @@ button {
     overflow: hidden;
 }
 
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--grey);
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 480px) {
+    :root {
+        font-size: 81.25%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        font-size: 87.5%;
+    }
+
+    .section-container {
+        padding: 15vh 0;
+    }
+}

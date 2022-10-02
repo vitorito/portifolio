@@ -1,23 +1,19 @@
-import openProjectModal from './projectModal.js';
+import './coffee.js';
+import './projects.js';
 import './skills.js';
 
-const menu = document.querySelector('.menu');
-const projectsGrid = document.querySelector('.projects__grid');
-const projectsGridCards = projectsGrid.querySelectorAll(
-  '.projects__grid__card'
-);
-const showMoreBtn = document.querySelector('.show-more-btn');
+const closeMenu = () => menu.classList.remove('open');
 
-const toggleMenu = () => menu.classList.toggle('open');
-
-const showMoreProjects = () => {
-  const hasShowMoreClass = projectsGrid.classList.toggle('show-more');
-  showMoreBtn.textContent = hasShowMoreClass ? 'Ver Menos' : 'Ver Mais';
+const toggleMenu = () => {
+  menu.classList.toggle('open');
 };
 
-menu.addEventListener('click', toggleMenu);
-showMoreBtn.addEventListener('click', showMoreProjects);
+const menu = document.querySelector('.menu');
+const menuBtn = document.querySelector('.menu__btn');
 
-projectsGridCards.forEach((card) => {
-  card.addEventListener('click', openProjectModal);
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleMenu();
 });
+
+menu.addEventListener('click', closeMenu);

@@ -1,5 +1,5 @@
 const getSkillDescription = (skill) => {
-    return skill.querySelector('.skill-description').textContent;
+    return skill.querySelector('.skill-description').innerHTML;
 };
 
 const animateTextChange = () => {
@@ -11,7 +11,7 @@ const animateTextChange = () => {
 
 const changeActiveSkill = ({ currentTarget: skill }) => {
     skill.classList.add('active-skill');
-    activeSkillDescription.textContent = getSkillDescription(skill);
+    activeSkillDescription.innerHTML = getSkillDescription(skill);
 
     skills.forEach(s => {
         if (s !== skill) s.classList.remove('active-skill');
@@ -27,4 +27,4 @@ skills.forEach(skill => {
     skill.addEventListener('click', changeActiveSkill);
 });
 
-changeActiveSkill({ currentTarget: skills[ 0 ] });
+changeActiveSkill({ currentTarget: skills[0] });
